@@ -1,0 +1,22 @@
+{% extends 'events/base.html' %}
+{% block content %}
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+      {% for event in events %}
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">{{ event.event_text }}</h4>
+            </div>
+            <div class="card-body">
+              <img class="card-img-top" src="{{ event.event_image.url }}" width="200px" height="175px" /></img>
+              <p></p><button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

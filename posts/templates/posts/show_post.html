@@ -1,0 +1,40 @@
+{% extends 'events/base.html' %}
+{% block content %}
+    <center><div class="row">
+      <div class="container">
+      {% for post in posts %}
+        {% if post.name == 'AUDI' %}
+        <div class="col-md-10">
+          <div class="card mb-4 box-shadow">
+            <div class="card-header">
+              <a href="{% url 'posts:one_post' post.id %}"><h4 class="my-0 font-weight-normal">{{ post.name }}</h4></a>
+            </div>
+            <div class="card-body">
+              <center>{{ post.text }}</center>
+              <center><img src="{{ post.image.url }}" width="500px" height="275px" /></img></center>
+              <center>{{ post.date }}</center>
+              <p></p><button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+            </div>
+          </div>
+          </div>
+
+        {% else %}
+        <div class="col-md-10">
+          <div class="card mb-4 box-shadow">
+            <div class="card-header">
+              <a href="{% url 'posts:one_post' post.id %}"><h4 class="my-0 font-weight-normal">{{ post.name }}</h4></a>
+            </div>
+            <div class="card-body">
+              <center>{{ post.text }}</center>
+              <center><img src="{{ post.image.url }}" width="400px" height="275px" /></img></center>
+              <center>{{ post.date }}</center>
+              <p></p><button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+            </div>
+          </div>
+          </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+    </div></center>
+{% endblock content %}
+

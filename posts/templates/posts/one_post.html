@@ -1,0 +1,19 @@
+{% extends 'events/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block content %}
+    <center>
+        <div>
+            <h1>{{ post.name }}</h1>
+            <h3>{{ post.text }}</h3>
+            <img src="{{ post.image.url }}" width="800px" height="475px" /></img>
+            <h3>{{ post.date }}</h3>
+        </div>
+    </center>
+    {% endblock content %}
+</body>
+</html>
