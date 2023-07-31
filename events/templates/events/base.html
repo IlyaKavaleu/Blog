@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -22,8 +23,8 @@
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-blue border-bottom box-shadow" style="background-color: blue">
       <nav class="my-2 my-md-0 mr-md-3">
         <strong><a class="p-2 text-whit" style="color: white" href="{% url 'events:home' %}">Company name</a></strong>
-        <strong><a class="p-2 text-white" href="#">About Me</a></strong>
-        <strong><a class="p-2 text-white" href="#">Facebook</a></strong>
+        <strong><a class="p-2 text-white" href="{% static 'CV_Ilya_Kavaleu.pdf' %}">About Me</a></strong>
+        <strong><a class="p-2 text-white" href="https://github.com/IlyaKavaleu">GitHub </a></strong>
         <strong><a class="p-2 text-white" href="{% url 'posts:show_post' %}">Blog</a></strong>
       </nav>
       <a class="btn btn-outline-primary bg-white" href="#" style="color: black;"><strong>Sign up</a></strong>
