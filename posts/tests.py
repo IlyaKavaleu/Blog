@@ -23,6 +23,7 @@ class PostsTestCase(TestCase):
         """Сhecking that the amount of data on the server and in the database is the same"""
         posts = Post.objects.all()
         path = reverse('posts:show_post')
+
         response_data = [post for post in posts]
         response = HttpResponse(response_data, content_type='text/type')
         self.assertEquals(list(response_data), list(posts))
